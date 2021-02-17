@@ -7,6 +7,8 @@ namespace Examples.Charge.Domain.Aggregates.PersonAggregate.Interfaces
 {
     public interface IPersonService
     {
-        Task<List<Person>> FindAllAsync();
+        Task<PersonDto> FindPersonById(long id);
+
+        Task SavePerson(PersonDto person);
     }
 }

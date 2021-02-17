@@ -1,0 +1,34 @@
+<div class="container">
+  <table>
+    <caption>Dados Usuários</caption>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Telefone</th>
+        <th>Tipo</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let telefone of telefones" (click)="clickTable(telefone)">
+        <td>{{ telefone.nome }}</td>
+        <td>{{ telefone.telefone }}</td>
+        <td>{{ telefone.tipoTelefone === 1 ? 'LocalPhone' : 'CellPhone' }}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="controls">
+    <h3>Campos para alteração de dados</h3>
+    <input type="text" placeholder="Nome" disabled [(ngModel)]="iptNome"/>
+    <input type="text" placeholder="Telefone" [(ngModel)]="iptTelefone"/>
+    <select [(ngModel)] = "slcTipoTelefone">
+      <option [ngValue]="1">LocalPhone</option>
+      <option [ngValue]="2">CellPhone</option>
+    </select>
+  </div>
+  <div class="botoesAcao">
+    <button type="button" (click)="salvarDados()">Salvar</button>
+    <button type="button" (click)="salvarDadosNoBanco()">Salvar Alterações no Banco</button>
+    <button type="button" (click)="limparCampos()">Limpar Dados</button>
+    <button type="button" (click)="deletar()">Deletar</button>
+  </div>
+</div>
