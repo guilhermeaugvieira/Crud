@@ -8,6 +8,7 @@
   align-items: center;
   justify-content: center;
   gap:30px;
+  margin-top: 200px;
 
   table{
     width: 50%;
@@ -15,10 +16,15 @@
 
     caption{
       font-size: xx-large;
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ccc;
     }
     
     thead{
+      margin-bottom: 20px;
+
       tr{
+        border-bottom: 3px solid #ccc;
         th{
           text-align: left;
         }
@@ -27,8 +33,11 @@
 
     tbody{
       tr{
+        border-bottom: 1px solid #000;
         &:hover{
-          background-color: #ccc;
+          color: blue;
+
+          cursor: pointer;
         }
       }
     }
@@ -40,6 +49,41 @@
     
     h3{
       text-align: center;
+    }
+  }
+
+  .actionButtons{
+    display: flex;
+    gap:15px;
+
+    button{
+      height: 30px;
+      min-width: 200px;
+      border: none;
+      border-radius: 5px;
+
+      &.saveLocal{
+        background-color: green;
+        color: white;
+      }
+
+      &.deleteButton{
+        background-color: red;
+        color: white;
+      }
+
+      &.saveDataButton{
+        background-color: #FCB737;
+        color: white;
+      }
+
+      &.clearButton{
+        background-color: #B1FEF9;
+      }
+
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }

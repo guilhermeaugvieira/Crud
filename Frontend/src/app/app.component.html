@@ -25,10 +25,10 @@
       <option [ngValue]="2">CellPhone</option>
     </select>
   </div>
-  <div class="botoesAcao">
-    <button type="button" (click)="salvarDados()">Salvar</button>
-    <button type="button" (click)="salvarDadosNoBanco()">Salvar Alterações no Banco</button>
-    <button type="button" (click)="limparCampos()">Limpar Dados</button>
-    <button type="button" (click)="deletar()">Deletar</button>
+  <div class="actionButtons">
+    <button type="button" class="saveLocal" (click)="salvarDados()">Salvar</button>
+    <button type="button" class="saveDataButton" (click)="salvarDadosNoBanco()">Salvar Alterações no Banco</button>
+    <button type="button" class="clearButton" (click)="limparCampos()">Limpar Dados</button>
+    <button type="button" class="deleteButton" (click)="deletar()">Excluir</button>
   </div>
 </div>
